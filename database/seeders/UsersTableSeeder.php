@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class PopulateUsersTable extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
