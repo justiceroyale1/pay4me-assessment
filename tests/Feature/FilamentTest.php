@@ -27,9 +27,11 @@ class FilamentTest extends TestCase
 
     public function test_non_admins_can_not_access_filament_dashboard(): void
     {
-        $user = User::factory()->create();
+        $user = User::factory()
+            ->notAdmin()
+            ->create();
         $response = $this->actingAs($user)->get(route('filament.admin.pages.dashboard'));
 
-        $response->assertOk();
+        $response->assertForbidden();
     }
 }
