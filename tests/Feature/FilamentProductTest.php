@@ -8,10 +8,12 @@ use App\Models\User;
 use Livewire\Livewire;
 use App\Models\Product;
 use App\Filament\Resources\ProductResource;
+use App\Filament\Resources\ProductResource\Pages\EditProduct;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Filament\Resources\ProductResource\Pages\ListProducts;
 use App\Models\Category;
+use Filament\Actions\DeleteAction;
 
 class FilamentProductTest extends TestCase
 {
@@ -40,17 +42,50 @@ class FilamentProductTest extends TestCase
             ->assertSee($products->last()->name);
     }
 
-    public function can_create_product()
+    public function test_can_create_product()
     {
         $category = Category::factory()->create();
         $this->assertEquals(0, Product::count());
 
         Livewire::test(CreateProduct::class)
-            ->set('title', 'Pen')
-            ->set('category_id', $category->id)
-            ->set('status', 'draft')
+            ->set('data.name', 'Pen')
+            ->set('data.category_id', $category->id)
+            ->set('data.status', 'draft')
             ->call('create');
 
         $this->assertEquals(1, Product::count());
+    }
+
+    public function test_can_update_product()
+    {
+        $category = Category::factory()->create();
+        $product = Product::factory()->create();
+        $this->assertEquals(1, Product::count());
+
+        Livewire::test(EditProduct::class, ['record' => $product->getRouteKey()])
+            ->set('data.name', 'Pencil')
+            ->set('data.category_id', $category->id)
+            ->set('data.status', 'published')
+            ->call('save');
+
+        $product->refresh();
+
+        $this->assertEquals('Pencil', $product->name);
+        $this->assertEquals('published', $product->status);
+        $this->assertEquals($category->id, $product
+            ->category_id);
+    }
+
+    public function test_can_delete_product()
+    {
+        $product = Product::factory()->create();
+        $this->assertEquals(1, Product::count());
+
+        Livewire::test(EditProduct::class, ['record' => $product->getRouteKey()])
+            ->callAction('delete', ['confirmation' => true]);
+
+        $this->assertSoftDeleted($product);
+
+        $this->assertEquals(0, Product::count());
     }
 }
