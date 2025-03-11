@@ -1,0 +1,211 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/localhost:8000"
+        }
+    ],
+    "info": {
+        "name": "Laravel API Documentation",
+        "_postman_id": "b8bfd609-70a3-4b26-aedc-5b4d1c577ab1",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/up",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/up",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/up"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"status\":\"ok\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":1,\"name\":\"Pen\",\"category_id\":1,\"status\":\"published\",\"created_at\":\"2025-03-10T13:28:38.000000Z\",\"updated_at\":\"2025-03-10T13:28:38.000000Z\",\"deleted_at\":null},{\"id\":2,\"name\":\"Bread\",\"category_id\":2,\"status\":\"draft\",\"created_at\":\"2025-03-10T13:31:17.000000Z\",\"updated_at\":\"2025-03-10T13:31:17.000000Z\",\"deleted_at\":null},{\"id\":4,\"name\":\"Quincy Stokes\",\"category_id\":3,\"status\":\"published\",\"created_at\":\"2025-03-10T14:06:42.000000Z\",\"updated_at\":\"2025-03-10T14:06:42.000000Z\",\"deleted_at\":null},{\"id\":5,\"name\":\"Mr. Eladio Stehr\",\"category_id\":4,\"status\":\"draft\",\"created_at\":\"2025-03-10T14:06:42.000000Z\",\"updated_at\":\"2025-03-10T14:06:42.000000Z\",\"deleted_at\":null},{\"id\":6,\"name\":\"Alejandra Schaefer\",\"category_id\":5,\"status\":\"draft\",\"created_at\":\"2025-03-10T14:06:42.000000Z\",\"updated_at\":\"2025-03-10T14:06:42.000000Z\",\"deleted_at\":null},{\"id\":7,\"name\":\"Dovie Breitenberg\",\"category_id\":6,\"status\":\"published\",\"created_at\":\"2025-03-10T14:06:42.000000Z\",\"updated_at\":\"2025-03-10T14:06:42.000000Z\",\"deleted_at\":null},{\"id\":8,\"name\":\"Darian Christiansen\",\"category_id\":7,\"status\":\"published\",\"created_at\":\"2025-03-10T14:06:42.000000Z\",\"updated_at\":\"2025-03-10T14:06:42.000000Z\",\"deleted_at\":null},{\"id\":9,\"name\":\"Kristin Ward\",\"category_id\":8,\"status\":\"draft\",\"created_at\":\"2025-03-10T14:06:42.000000Z\",\"updated_at\":\"2025-03-10T14:06:42.000000Z\",\"deleted_at\":null},{\"id\":10,\"name\":\"Kameron Mraz II\",\"category_id\":9,\"status\":\"draft\",\"created_at\":\"2025-03-10T14:06:42.000000Z\",\"updated_at\":\"2025-03-10T14:06:42.000000Z\",\"deleted_at\":null},{\"id\":11,\"name\":\"Prof. Fred Ankunding\",\"category_id\":10,\"status\":\"draft\",\"created_at\":\"2025-03-10T14:06:42.000000Z\",\"updated_at\":\"2025-03-10T14:06:42.000000Z\",\"deleted_at\":null}],\"links\":{\"first\":\"http:\\\/\\\/localhost:8000\\\/api\\\/products?page=1\",\"last\":\"http:\\\/\\\/localhost:8000\\\/api\\\/products?page=2\",\"prev\":null,\"next\":\"http:\\\/\\\/localhost:8000\\\/api\\\/products?page=2\"},\"meta\":{\"current_page\":1,\"from\":1,\"last_page\":2,\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/products?page=1\",\"label\":\"1\",\"active\":true},{\"url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/products?page=2\",\"label\":\"2\",\"active\":false},{\"url\":\"http:\\\/\\\/localhost:8000\\\/api\\\/products?page=2\",\"label\":\"Next &raquo;\",\"active\":false}],\"path\":\"http:\\\/\\\/localhost:8000\\\/api\\\/products\",\"per_page\":10,\"to\":10,\"total\":12}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"b\",\"category_id\":22,\"status\":\"draft\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":1,\"name\":\"Pen\",\"category_id\":1,\"status\":\"published\",\"created_at\":\"2025-03-10T13:28:38.000000Z\",\"updated_at\":\"2025-03-10T13:28:38.000000Z\",\"deleted_at\":null}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
