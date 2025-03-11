@@ -98,3 +98,9 @@ cd pay4me-assessment
 ```sh
 php artisan test
 ```
+
+## API
+
+The products API can be accessed via `/api/products`. For example: [http://localhost:8000/api/products](http://localhost:8000/api/products).
+
+The Docs can be found at [http://localhost:8000/docs](http://localhost:8000/docs).
