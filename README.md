@@ -2,6 +2,12 @@
 
 This project was created in fulfillment of the requirements for the role of Backend Engineer at [pay4me.app](https://pay4me.app/).
 
+## FilamentPHP Admin Login Credentials
+These credentials are valid if and only if you follow the steps in the **setup** below.
+
+- email: admin@example.com
+- password: password
+
 ## Requirements
 
 Before you setup the app, make sure you have the following installed
