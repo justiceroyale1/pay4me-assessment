@@ -1,6 +1,6 @@
 ## Pay4me Take Home Coding Task
 
-This project was created in fulfillment of the requirements for the role of fullstack developer at [pay4me.app](https://pay4me.app/).
+This project was created in fulfillment of the requirements for the role of Backend Engineer at [pay4me.app](https://pay4me.app/).
 
 ## Requirements
 
